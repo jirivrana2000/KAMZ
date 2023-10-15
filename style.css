@@ -1,0 +1,416 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 500;
+
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*My own css start here*/
+ * {
+	box-sizing: border-box;
+ }
+
+
+
+
+header {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	background: #f2f2f2;
+	min-width: 350px;
+	xmargin-bottom: 1000px;
+}
+nav{
+	xheight: 65px;
+	width: 100%;
+	display: flex;
+	xborder: 3px solid green;
+}
+
+.logo img{
+	xborder: 3px solid red;
+	color: red;
+	margin: 20px 50px;
+}
+
+.langSwitch {
+	border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+	font-size: 16px;
+	margin: 15px;
+	margin-top: 16px;
+	margin-left: auto;
+}
+
+.searchIcon {
+	background-color: black;
+	border-color: black;
+	border-radius: 25px;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	xmargin-left: auto;
+	margin: auto 15px;
+	xborder: 3px solid yellow;
+}
+
+.searchIcon:hover {
+	background-color: #e45c5e;
+}
+
+
+.searchIcon i{
+	font-size: 18px;
+	color: white;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 1px solid #ebebeb;
+	padding: 0 20px;
+}
+
+.socials i {
+	color: #b3b3b3;
+	font-size: 25px;
+	margin: auto 15px;
+}
+
+nav ul{
+	xborder: 3px solid blue;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+nav ul li{
+	display: inline-block;
+	xline-height: 50px;
+	xborder: 3px solid pink;
+	margin-right: 20px;
+}
+nav ul li a{
+	color: black;
+	font-size: 14px;
+	text-decoration: none; 
+}
+header a:hover {
+	color: #636363;
+}
+.checkbtn{
+	font-size: 30px;
+	color: black;
+	line-height: 65px;
+	display: none;
+}
+#check{
+	display: none;
+}
+
+
+
+
+.slider-container {
+	position: relative;
+	width: 400px;
+	overflow: hidden;
+}
+  
+.slider {
+	display: flex;
+	transition: transform 1s ease-in-out;
+}
+  
+.slide {
+	flex: 0 0 100%;
+}
+  
+img {
+	max-width: 100%;
+	height: auto;
+}
+  
+.progress-container {
+	position: relative;
+}
+  
+.progress-bar {
+	width: 0;
+	height: 4px;
+	background-color: #0074d9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 1s linear;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+	.socials {
+		display: none;
+	}
+}
+  
+
+
+@media (max-width: 1200px) {
+    header {
+		xbackground: none;
+	}
+	.checkbtn{
+		position: fixed;
+    	display: block;
+		z-index: 2;
+		right: 24px;
+		margin-top: 10px;
+		xborder: 3px solid pink;
+  	}
+  	ul{
+    	position: fixed;
+    	width: 100%;
+    	height: 100vh;
+		padding-bottom: 50px;
+    	background: white;
+    	left: -100%;
+    	z-index: 1;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: space-around;
+    	transition: all .5s;
+  	}
+  	nav ul li{
+   		display: block;
+  	}
+  	nav ul li a{
+    	font-size: 34px;
+  	}
+  	#check:checked ~ ul{
+    	left: 0;
+  	}
+
+	.langSwitch,
+	.socials {
+		display: none;
+	}
+
+	.searchIcon {
+		margin-left: auto;
+		margin-right: 80px;
+	}
+}
+
+@media (max-width: 400px) {
+	.logo img{
+		margin: 20px;
+	}
+	.searchIcon {
+		margin-right: 70px;
+
+	}
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+	xright: 100px;
+	margin-top: 30px;
+	margin-left: -8px;
+}
+
+.image {
+    width: 765px;
+    height: 510px;
+    display: none;
+	position: relative;
+}
+
+.img {
+	filter: brightness(0.9);
+}
+
+
+
+
+
+.articleText {
+	top: 0;
+	color: white;
+	width: 280px;
+	letter-spacing: 0.3px;
+	font-size: 16px;
+	line-height: 20px;
+	top: 395px;
+}
+
+.articleReadMore {
+	bottom: 25px;
+	font-size: 12px;
+	color: #e45c5e;
+}
+
+.articleText,
+.articleReadMore {
+	position: absolute;
+	left: 20px;
+}
+
+
+
+
+
+.active-image {
+    display: block;
+	position: relative;
+}
+
+.windows-container {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.window {
+    width: 242px;
+    height: 170px;
+    background-color: transparent;
+    border: 3px solid transparent;
+	xxmargin-left: 0px;
+	margin-left: 58px;
+	padding: 10px;
+	letter-spacing: 0.3px;
+}
+
+#window2 {
+	xborder-top: 1px solid #ebebeb;
+	xborder-bottom: 1px solid #ebebeb;
+	xborder-right: 30px transparent;
+}
+
+.progress-bar {
+    xwidth: 300px;
+	xmargin-left: 5px;
+	max-width: 300px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    display: none; /* Skrytý progresní bar */
+	Xborder: 3px solid blue;
+	margin-left: 58px;
+}
+#progress-bar1 {
+	
+	top: 165px;
+}
+
+#progress-bar2 {
+	top: 335px;
+}
+
+#progress-bar3 {
+	top: 505px;
+}
+
+
+.window {
+	color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+.category {
+	font-size: 10px;
+	color: #b2b2b2;
+}
+
+.articleName {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: 60px;
+	font-weight: 500;
+}
+
+.readMore {
+	font-size: 10px;
+	display: block;
+	margin-top: auto;
+	margin-bottom: 3px;
+	color: white;
+	opacity: 0.7;
+	xborder: 3px solid yellow;
+}
+  
+
