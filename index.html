@@ -5,26 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='style.css'/>
     <script src="script.js" defer></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
     <title>Document</title>
 </head>
 <body>
-
-
     <header>
         <nav>
-
-            <a class="logo" href="index.html"><img src="./img/logo.svg" alt=""></a>
-
+            <a class="logo" href="index.html"><img src="./img/logo.svg" alt="logo kanceláře architekta města Zlína"></a>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-
-            
-
             <ul>
                 <li><a href="">PROJEKTY</a></li>
                 <li><a href="">SOUTĚŽE</a></li> 
@@ -34,66 +25,83 @@
                 <li><a href="">O NÁS</a></li> 
                 <li><a href="">KONTAKTY</a></li> 
             </ul>
-
             <button class="langSwitch">ENG</button>
-
             <div class="searchIcon">
                 <i class="fas fa-search"></i>
             </div>
-
             <div class="socials">
                 <i class="fab fa-facebook"></i>
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-youtube"></i>
             </div>
-            
-
         </nav>
     </header>
-
-
-    
-    <div class="image-container">
-        <div class="windows-container">
-            <div class="window" id="window1">
-                <p class="category">AKTUÁLNĚ</p>
-                <p class="articleName">Setkání PR týmu KAMů v Ostravě</p>
-                <p class="readMore">ČÍST VÍCE ></p>
-                <div class="progress-bar" id="progress-bar1"></div>
+    <div class="main">
+        <div class="imageContainer">
+            <div class="windows-container">
+                <div onclick="windowChange(0)" class="window" id="window1">
+                    <p class="category" id="category1">AKTUÁLNĚ</p>
+                    <h2 class="articleName" id="article1">Setkání PR týmu KAMů v Ostravě</h2>
+                    <p class="readMore">ČÍST VÍCE ></p>
+                    <div id="progress-bar1"></div>
+                </div>
+                <div onclick="windowChange(1)"  class="window" id="window2">
+                    <p class="category" id="category2">PROJEKT</p>
+                    <h2 class="articleName" id="article2">Studie regenerace obytné čtvrti Obeciny</h2>
+                    <p class="readMore">ČÍST VÍCE ></p>
+                    <div id="progress-bar2"></div>
+                </div>
+                <div onclick="windowChange(2)"  class="window" id="window3">
+                    <p class="category" id="category3">SOUTĚŽ</p>
+                    <h2 class="articleName" id="article3">Sad Svobody: krajinářské soutěž lorem ipsum dolor sit amet con</h2>
+                    <p class="readMore">ČÍST VÍCE ></p>
+                    <div id="progress-bar3"></div>
+                </div>
             </div>
-            <div class="window" id="window2">
-                <p class="category">PROJEKT</p>
-                <p class="articleName">Studie regenerace obytné čtvrti Obeciny</p>
-                <p class="readMore">ČÍST VÍCE ></p>
-                <div class="progress-bar" id="progress-bar2"></div>
+            <div class="image" id="image1">
+                <img class="img" src="./img/DSC01449-HDR.jpg" alt="Image 1">
+                <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
+                <a class="articleReadMore" href="">ČÍST VÍCE</a>
+                <p class="articlePosition">1/3</p>
+                <button class="nextButton"><img class="next" src="./img/pngwing.com.png" alt="šipka další"></button>
+                <button class="prevButton"><img class="prev" src="./img/pngwing.com.png" alt="šipka předchozí"></button>
             </div>
-            <div class="window" id="window3">
-                <p class="category">SOUTĚŽ</p>
-                <p class="articleName">Sad Svobody: krajinářské soutěž lorem ipsum dolor sit amet con</p>
-                <p class="readMore">ČÍST VÍCE ></p>
-                <div class="progress-bar" id="progress-bar3"></div>
+            <div class="image" id="image2">
+                <img class="img"  src="./img/DSC01434-HDR.jpg" alt="Image 2">
+                <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
+                <a class="articleReadMore" href="">ČÍST VÍCE</a>
+                <p class="articlePosition">2/3</p>
+                <button class="nextButton"><img class="next" src="./img/pngwing.com.png" alt="šipka další"></button>
+                <button class="prevButton"><img class="prev" src="./img/pngwing.com.png" alt="šipka předchozí"></button>
+            </div>
+            <div class="image" id="image3">
+                <img class="img"  src="./img/DSC01389-HDR.jpg" alt="Image 3">
+                <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
+                <a class="articleReadMore" href="">ČÍST VÍCE</a>
+                <p class="articlePosition">3/3</p>
+                <button class="nextButton"><img class="next" src="./img/pngwing.com.png" alt="šipka další"></button>
+                <button class="prevButton"><img class="prev" src="./img/pngwing.com.png" alt="šipka předchozí"></button>
             </div>
         </div>
-        <div class="image active-image">
-            <img class="img" src="./img/DSC01449-HDR.jpg" alt="Image 1">
-            <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
-            <a class="articleReadMore" href="">ČÍST VÍCE</a>
-        </div>
-        <div class="image">
-            <img class="img"  src="./img/DSC01434-HDR.jpg" alt="Image 2">
-            <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
-            <a class="articleReadMore" href="">ČÍST VÍCE</a>
-        </div>
-        <div class="image">
-            <img class="img"  src="./img/DSC01389-HDR.jpg" alt="Image 3">
-            <p class="articleText">V dubnu se konalo setkání zástupců kanceláří architektů měst z celé České republiky.</p>
-            <a class="articleReadMore" href="">ČÍST VÍCE</a>
+        <div class="eventContainer">
+            <h3>UDÁLOSTI</h3>
+            <div class="oneEvent">
+                <p class="eventDate">25.5. - 27.5. 2023</p>
+                <h4>KAM na festivalu Zlín</h4>
+                <p class="eventPlace">Stan v Parku Komenského</p>
+            </div>
+            <div class="oneEvent">
+                <p class="eventDate">8. 6. 2023 / 10 - 17 h</p>
+                <h4>Workshop s U/U Studio: Opomíjená prostranství a co s nimi?</h4>
+                <p class="eventPlace">Zasedací místnost radnice</p>
+            </div>
+            <div class="oneEvent">
+                <p class="eventDate">15. 6. 2023 / 18.30 h</p>
+                <h4>Beseda s občany: Revitalizace obytné čtvrti Obeciny</h4>
+                <p class="eventPlace">Školní jídelna 10.ZŠ</p>
+            </div>
+            <a class="moreEvents" href="">VŠECHNY UDÁLOSTI</a>
         </div>
     </div>
-
-
-    
-   
-
 </body>
 </html>
